@@ -2,7 +2,7 @@
 
 What is metaid-parser?
 ----------------------
-This is a tool designed for parsing Metaid data. It can parse transaction data from the blockchain into an object, making it convenient for subsequent operations. By referencing this tool, you can create your own Metaid transaction data parsing tool.
+This is a tool designed for parsing MetaID data. It can parse transaction data from the blockchain into an object, making it convenient for subsequent operations. By referencing this tool, you can create your own MetaID transaction data parsing tool.
 
 How to use metaid-parser?
 -------------------------
