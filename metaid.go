@@ -23,7 +23,7 @@ func DecodeTxToDataPart(bytes []byte) (*parser.DataPart, string, []*model.MetaTx
 		if err != nil {
 			continue
 		}
-		dataPart := parser.PartsToDataPart(data)
+		dataPart := parser.ChainDataToDataPart(data)
 		dataPart.TxId = rawTx.TxID
 		dataPart.MetanetId = parser.MakeMetanetId(dataPart.NodePublicKey, dataPart.NodeParentTxId)
 		return dataPart, out.GetLockScript(), vouts, vins, true
@@ -53,7 +53,7 @@ func DecodeTxToDataPartForMetaFile(bytes []byte) (*parser.DataPart, string, bool
 		if err != nil {
 			continue
 		}
-		dataPart := parser.PartsToDataPart(data)
+		dataPart := parser.ChainDataToDataPart(data)
 		dataPart.TxId = rawTx.TxID
 		dataPart.MetanetId = parser.MakeMetanetId(dataPart.NodePublicKey, dataPart.NodeParentTxId)
 		return dataPart, out.GetLockScript(), true
@@ -125,7 +125,7 @@ func DecodeTxToDataPartForDataString(bytes []byte) (string, bool) {
 		if err != nil {
 			continue
 		}
-		dataPart := parser.PartsToDataPart(data)
+		dataPart := parser.ChainDataToDataPart(data)
 
 		if util.ValueOf(dataPart.Data).Kind() != reflect.String {
 			return "", true
@@ -147,7 +147,7 @@ func DecodeTxToDataPartForDataObj(bytes []byte) (interface{}, bool) {
 		if err != nil {
 			continue
 		}
-		dataPart := parser.PartsToDataPart(data)
+		dataPart := parser.ChainDataToDataPart(data)
 		return dataPart.Data, true
 	}
 	return "", false
@@ -164,7 +164,7 @@ func DecodeTxToDataPartForImageDataString(bytes []byte) (string, bool) {
 		if err != nil {
 			continue
 		}
-		dataPart := parser.PartsToDataPart(data)
+		dataPart := parser.ChainDataToDataPart(data)
 
 		if util.ValueOf(dataPart.Data).Kind() != reflect.String {
 			return "", true

@@ -33,7 +33,7 @@ type DataPart struct {
 	Params              []string    `json:"params"` //extra params
 }
 
-func PartsToDataPart(parts []string) *DataPart {
+func ChainDataToDataPart(parts []string) *DataPart {
 	chainTag := ""
 	nodePublicKey := ""
 	nodeParentChainTag := ""

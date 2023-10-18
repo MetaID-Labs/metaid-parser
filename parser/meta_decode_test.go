@@ -59,7 +59,7 @@ func TestDecodeMetaOutScript(t *testing.T) {
 	fmt.Println("data:")
 	fmt.Println(len(data))
 	fmt.Println(data)
-	da := PartsToDataPart(data)
+	da := ChainDataToDataPart(data)
 	fmt.Println(da.MetaIdTag)
 }
 
