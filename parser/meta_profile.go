@@ -19,6 +19,8 @@ var (
 		OpMeta,
 		OpMVC,
 	}
+
+	MetaIDFlag = "metaid"
 )
 
 func IsChainFlag(opStr string) (bool, string) {
