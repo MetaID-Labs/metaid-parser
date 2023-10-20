@@ -1,5 +1,7 @@
 package parser
 
+import "strings"
+
 const (
 	Op0      = 0x00
 	OpReturn = 0x6A
@@ -26,4 +28,13 @@ func IsChainFlag(opStr string) (bool, string) {
 		}
 	}
 	return false, ""
+}
+
+func CheckChainFlag(chainFlag string) bool {
+	for _, v := range OP_CHAIN_FLAG_LIST {
+		if strings.ToLower(chainFlag) == string(v) {
+			return true
+		}
+	}
+	return false
 }

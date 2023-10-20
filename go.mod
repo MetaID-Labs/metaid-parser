@@ -3,7 +3,7 @@ module github.com/MetaID-Labs/metaid-parser
 go 1.20
 
 require (
-	github.com/MetaID-Labs/metaid-base-model v0.0.3
+	github.com/MetaID-Labs/metaid-base-model v0.0.5
 	github.com/btcsuite/btcutil v1.0.2
 	golang.org/x/crypto v0.14.0
 )
