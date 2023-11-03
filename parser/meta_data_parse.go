@@ -65,7 +65,7 @@ func ChainDataToDataPart(parts []string) *DataPart {
 			nodeParentTxId = parts[index]
 			break
 		case 5: //MetaIdTag
-			metaIdTag = parts[index]
+			metaIdTag = strings.ToLower(parts[index])
 			break
 		case 6: //NodeName
 			nodeName = parts[index]
